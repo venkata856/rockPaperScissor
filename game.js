@@ -1,5 +1,5 @@
+const computerChoice=["Rock","Paper","Scissor"]
 function getComputerChoice(){
-    let computerChoice=["Rock","Paper","Scissor"]
     let random = Math.floor(Math.random() * 3);
     return computerChoice[random]
 }
@@ -19,8 +19,10 @@ function playRound(playerSelection,getComputerChoice){
 
     if(!(getComputerChoice.localeCompare(playerSelection)===0)){
         if((getComputerChoice=="ROCK" && playerSelection=="SCISSOR") || (getComputerChoice=="PAPER" && playerSelection=="ROCK") || (getComputerChoice=="SCISSOR" && playerSelection=="PAPER")){
+            console.log("Computer is the winner!!")
             winner.computer++;
         }else if((getComputerChoice=="ROCK" && playerSelection=="PAPER") || (getComputerChoice=="PAPER" && playerSelection=="SCISSOR") || (getComputerChoice=="SCISSOR" && playerSelection=="ROCK")){
+            console.log("User is the winner!!")
             winner.user++;
         }
 
@@ -35,6 +37,11 @@ function play(){
     while(true){
         
         let playerSelection = prompt("Enter your choice")
+        // if(!computerChoice.includes(playerSelection)){
+        //     console.log("wrong value entered!!")
+        //     break
+            
+        // }
 
         console.log(playRound(playerSelection,getComputerChoice()))
 
