@@ -1,5 +1,5 @@
 function getComputerChoice(){
-    let computerChoice=["Rock","Paper","Scissors"]
+    let computerChoice=["Rock","Paper","Scissor"]
     let random = Math.floor(Math.random() * 3);
     return computerChoice[random]
 }
@@ -17,14 +17,13 @@ function playRound(playerSelection,getComputerChoice){
     console.log("player choice is " +playerSelection)
     // console.log(getComputerChoice.localeCompare(playerSelection))
 
-    if(getComputerChoice.localeCompare(playerSelection)===0){
-        winner.computer++;
-        winner.user++;
+    if(!(getComputerChoice.localeCompare(playerSelection)===0)){
+        if((getComputerChoice=="ROCK" && playerSelection=="SCISSOR") || (getComputerChoice=="PAPER" && playerSelection=="ROCK") || (getComputerChoice=="SCISSOR" && playerSelection=="PAPER")){
+            winner.computer++;
+        }else if((getComputerChoice=="ROCK" && playerSelection=="PAPER") || (getComputerChoice=="PAPER" && playerSelection=="SCISSOR") || (getComputerChoice=="SCISSOR" && playerSelection=="ROCK")){
+            winner.user++;
+        }
 
-    }else if(getComputerChoice.localeCompare(playerSelection)===-1){
-        winner.computer++;
-    }else if(getComputerChoice.localeCompare(playerSelection)===1){
-        winner.user++;
     }
 
     console.log(winner)
@@ -33,11 +32,14 @@ function playRound(playerSelection,getComputerChoice){
 }
 
 function play(){
-    for(let i =0; i<5;i++){
+    while(true){
         
         let playerSelection = prompt("Enter your choice")
 
         console.log(playRound(playerSelection,getComputerChoice()))
+
+        if(winner.computer==5 || winner.user==5 )
+        break;
     }
 
     if(winner.computer>winner.user){
