@@ -4,10 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="game.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="game.js" defer></script>
 </head>
 <body>
-    
+    <header>Rock Paper Scissor</header>
+    <div class="heading">
+        <h3>Click Play game button to play Rock Paper Scissor</h3>
+    </div>
+    <div class="play">
+        <button class="play-game">Play game</button>
+    </div>
+
+    <div class ='options hidden'>
+        <button class="rock">Rock</button>
+        <button class='paper'>Paper</button>
+        <button class="scissor">Scissor</button>
+        <button class="retry hidden"><i class="fa-solid fa-clock-rotate-left"></i></button>
+    </div>
+    <div class='result-display hidden'>
+        <p>Select your choice!!</p> 
+    </div>
+
+
 </body>
 </html>

@@ -1,0 +1,145 @@
+body{
+    padding:0;
+    margin:0;
+    background:linear-gradient(90deg,rgb(105, 99, 99) 25%, rgb(120, 120, 96) 35%, rgb(192, 140, 148) 55%, rgb(151, 80, 80) 85%, rgb(112, 165, 112) 100%);
+}
+
+
+
+button{
+
+    /* height:60px;
+    width:80px; */
+    height:80px;
+    width:140px;
+    border-radius:10px;
+    background:rgb(121, 156, 159);
+    box-shadow: 4px 3px 3px 3px rgb(111 73 56 / 50%);
+    color:rgb(45, 39, 39);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button:hover{
+
+    height:80px;
+    width:140px;
+    border-radius:10px;
+    background:rgb(5, 76, 81);
+    color:white;
+    box-shadow: 4px 3px 3px 3px rgb(111 73 56 / 50%);
+    cursor:pointer;
+}
+button:active{
+
+    transform:scale(1.1);
+
+}
+
+button:disabled{
+    height:80px;
+    width:140px;
+    border-radius:10px;
+    background:rgb(40, 46, 46);
+    color:rgb(213, 72, 72);
+    box-shadow: 4px 3px 3px 3px rgb(111 73 56 / 50%);
+    transform:none;
+}
+
+
+
+.options{
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:56px;
+    transition: all 0.0s ease-out 0s;
+
+    /* margin-top:200px; */
+}
+
+.play-game{
+
+    text-align: center;
+    margin-right: 270px;
+}
+
+.play{
+    display:flex;
+    justify-content:center;
+    align-items: center; 
+    margin-top:100px;
+    margin-left: 200px;
+}
+
+.play-game{
+    height:80px;
+    width:140px;
+}
+
+header{
+    margin:20px;
+    font-size: 32px;
+    padding:6px;
+    font-weight:bold;
+    color:rgb(55, 3, 44)
+}
+
+
+
+.result-display{
+
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+    margin:auto;
+
+    margin-top:78px;
+    
+    /* height:250px; */
+    width:400px;
+    border:3px solid rgb(0, 255, 191);
+    border-radius: 15px;
+    box-shadow: 8px 6px 13px 6px rgb(14 107 60 / 50%);
+    background-color: rgb(83, 98, 99);
+    color: rgb(44, 235, 14);
+}
+
+.result-display p{
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hidden{
+
+    display:none;
+}
+
+h3{
+    color: rgb(244 219 222);
+    font-size: 45px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding:6px;
+    margin-top:120px;
+    text-shadow: 3px 4px 7px rgb(75 16 16);
+
+}
+
+.fa-solid{
+
+    color:black;
+}
+
+.fa-solid{
+
+    /* height:60px;
+    width:80px; */
+
+    font-size:2rem;
+
+}
